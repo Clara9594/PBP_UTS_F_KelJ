@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000000</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="buttonSignIn">#1b2c42</color>
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+
+    <color name="textColor">#ffffff</color>
+    <color name="background">#101a26</color>
+    <color name="buttonSignUp">#055898</color>
+    <color name="cardview">#32455e</color>
+    <color name="sidebar">#212b66</color>
+    <color name="icon">#ffffff</color>
+    <color name="toolbar">#1b2c42</color>
+
+</resources>

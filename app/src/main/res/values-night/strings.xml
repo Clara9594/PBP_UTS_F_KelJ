@@ -1,0 +1,106 @@
+<resources>
+    <string name="app_name">TugasBesar_PBP_F</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_desc">Navigation header</string>
+
+    <!--    Ini Login string buat login-->
+    <string name="login">Login</string>
+    <string name="hello">Hi! Welcome</string>
+    <string name="email">Email*</string>
+    <string name="pass">Password*</string>
+    <string name="button">Login</string>
+    <string name="signUp">Sign Up</string>
+
+    <!--    Ini string buat Sign Up-->
+    <string name="message">Please Enter your Identity!</string>
+    <string name="first">First Name*</string>
+    <string name="last">Last Name*</string>
+    <string name="phone">Phone*</string>
+    <string name="country">Country</string>
+
+    <!--    ini String buat sidebar-->
+    <string name="home">Home</string>
+    <string name="pp">Profile</string>
+    <string name="about">About</string>
+    <string name="setting">Settings</string>
+    <string name="keluar">Sign Out</string>
+
+
+    <!--    Ini string buat About Us-->
+    <string name="aboutUs">About Us</string>
+    <string name="desc">Description</string>
+    <string name="desc1">Cardido is a platform used by many
+        \npeople in Indonesia to find
+        \nconvenience in renting a car. </string>
+    <string name="contact">Our Contact :</string>
+    <string name="contact1">(021) 82601735</string>
+    <string name="developer">Developer : </string>
+    <string name="D1">Benedicto Natanael /180709702</string>
+    <string name="D2">Clara Dilla / 180709594</string>
+    <string name="D3">Theodore Aldo / 180709607</string>
+
+    <!--     Ini String buat pemesanan-->
+    <string name="pick_up_date">Pick-up Date</string>
+    <string name="drop_out_date">Drop-out Date</string>
+    <string name="pick_up_times">Pick-up Times</string>
+    <string name="drop_out_times">Drop-out Times</string>
+    <string name="pick_up_loc">Pick Up Location</string>
+    <string name="stKategoriAge">18-29</string>
+    <string name="ndKategoriAge">30-40</string>
+    <string name="trKategoriAge">40+</string>
+    <string name="driver_age">Driver`s Age</string>
+    <string name="search">Search</string>
+    <string name="date">Date</string>
+    <string name="time">Time</string>
+
+    <string name="action_home">Home</string>
+    <string name="action_widget">Widget</string>
+    <string name="action_dialog">Dialog</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_about">About</string>
+    <string name="menu_book">My Booking</string>
+    <string name="exit">Exit</string>
+    <string name="send">Send</string>
+    <string name="first_title">MenuGuided9702_Benedicto Nathanael</string>
+    <string name="hint_widget">Please fill this widget!</string>
+    <string name="hint_first_name">Your first name</string>
+    <string name="hint_last_name">Your last name</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    Ini string buat Details-->
+    <string name="car_image">Receipt Image</string>
+    <string name="details">Details</string>
+    <string name="nameD">Name</string>
+    <string name="emailD">Email</string>
+    <string name="phoneD">Phone Number</string>
+    <string name="countryD">Country</string>
+    <string name="pick_up_location">Pick-up Location</string>
+    <string name="drop_off_date">Drop-Off Date</string>
+    <string name="drop_off_time">Drop-Off Time</string>
+    <string name="continueD">Continue</string>
+    <string name="receipt_title"></string>
+
+
+    <!--    Ini buat settings-->
+    <string name="header">Set Your Theme</string>
+    <string name="body">Theme :</string>
+    <string name="save">Save</string>
+
+    <!--    Ini buat Profil-->
+    <string name="judul">Profile</string>
+    <string name="deskripsi">Please set your Profile!</string>
+    <string name="username">Username</string>
+    <string name="no">Phone</string>
+
+    <string name="NLMode">Dark Mode</string>
+
+    <!--    Ini string untuk success-->
+    <string name="success">Success!</string>
+    <string name="finish">Finish</string>
+
+</resources>

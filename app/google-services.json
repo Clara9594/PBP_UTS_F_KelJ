@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "220504475528",
+    "firebase_url": "https://tugasbesarpbpf.firebaseio.com",
+    "project_id": "tugasbesarpbpf",
+    "storage_bucket": "tugasbesarpbpf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:220504475528:android:c0ec899b3f347f95a19c3d",
+        "android_client_info": {
+          "package_name": "com.example.tugasbesar_pbp_f"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "220504475528-746tf3tokh072otf6lqhmf9biefdojf0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.tugasbesar_pbp_f",
+            "certificate_hash": "4fa6e08da02141e87af2d692f74de8b54d35d03e"
+          }
+        },
+        {
+          "client_id": "220504475528-cgju2d7k3dh1kuclb776hjl2dktosaj6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCIYQ41ID4XcSX6XQRt-yen4bZ3eUU8DgU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "220504475528-cgju2d7k3dh1kuclb776hjl2dktosaj6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
