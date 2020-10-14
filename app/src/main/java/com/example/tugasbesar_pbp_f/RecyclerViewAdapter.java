@@ -60,6 +60,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             super(itemView.getRoot());
             adapterRecyclerViewBinding = itemView;
         }
+
         public void onClick(View view) {
             Toast.makeText(context, "You touch me?", Toast.LENGTH_SHORT).show();
         }
