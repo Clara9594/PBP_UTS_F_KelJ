@@ -90,12 +90,17 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(Login.this, "Log In Error, please try again!", Toast.LENGTH_SHORT).show();
                             }
                             else{
-                                SharedPreferences.Editor editor = statusLogin.edit();
-                                editor.putBoolean("status_login",true);
-                                editor.commit();
-                                Toast.makeText(Login.this, "Log In Successfully", Toast.LENGTH_SHORT).show();
-                                Intent intToHome = new Intent(Login.this,DateActivity.class);
-                                startActivity(intToHome);
+                                try {
+                                    SharedPreferences.Editor editor = statusLogin.edit();
+                                    editor.putBoolean("status_login", true);
+                                    editor.commit();
+                                    Toast.makeText(Login.this, "Log In Successfully", Toast.LENGTH_SHORT).show();
+                                    Intent intToHome = new Intent(Login.this, MainActivity.class);
+                                    startActivity(intToHome);
+                                }catch (Exception E)
+                                {
+                                    System.out.println("peyebab probably: " +E.getLocalizedMessage());
+                                }
                             }
                         }
                     });

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TugasBesar_PBP_F</string>
+    <string name="app_name">Cardido</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_desc">Navigation header</string>
@@ -29,8 +29,8 @@
     <!--    Ini string buat About Us-->
     <string name="aboutUs">About Us</string>
     <string name="desc">Description</string>
-    <string name="desc1">Cardido is a platform used by many
-        \npeople in Indonesia to find
+    <string name="desc1">Cardido is a platform used
+        \nby many people to find
         \nconvenience in renting a car. </string>
     <string name="contact">Our Contact :</string>
     <string name="contact1">(021) 82601735</string>
@@ -103,5 +103,12 @@
     <!--    Ini string untuk success-->
     <string name="success">Success!</string>
     <string name="finish">Finish</string>
+
+
+<!--    ini buat main activity-->
+    <string name="wellcome">Welcome to Cardido</string>
+    <string name="searchTxt">What</string>
+    <string name="access_token">pk.eyJ1IjoiYmVubmF0aDk3MDIiLCJhIjoiY2tmcXFhaWt0MDd6ejJ5cWxqbWwzaGYxaCJ9.4ETLW7gFNVDSreF9xNk40w</string>
+    <string name="next">Next</string>
 
 </resources>
