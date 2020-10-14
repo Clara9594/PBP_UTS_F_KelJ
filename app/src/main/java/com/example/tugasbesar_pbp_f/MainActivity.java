@@ -76,16 +76,16 @@ public class MainActivity extends AppCompatActivity {
         }
 
         FirebaseMessaging.getInstance().subscribeToTopic("news")
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        String mag = "Successful";
-                        if(!task.isSuccessful()){
-                            mag = "Failed";
-                        }
-                        Toast.makeText(MainActivity.this, mag, Toast.LENGTH_SHORT).show();
+            .addOnCompleteListener(new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    String mag = "Successful";
+                    if(!task.isSuccessful()){
+                        mag = "Failed";
                     }
-                });
+                    Toast.makeText(MainActivity.this, mag, Toast.LENGTH_SHORT).show();
+                }
+            });
 
         //Assign variable
         drawerLayout = findViewById(R.id.drawer_layout);

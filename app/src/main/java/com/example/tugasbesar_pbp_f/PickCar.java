@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tugasbesar_pbp_f.databinding.ActivityPickcarBinding;
 import com.example.tugasbesar_pbp_f.databinding.ActivityPickcarBinding;
+import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
 
@@ -23,10 +24,13 @@ public class PickCar extends AppCompatActivity {
     private RecyclerViewAdapter adapter;
     private RecyclerView.LayoutManager mLayoutManager;
     ImageButton back;
+    MaterialButton btnPay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_pickcar);
+
         ListCar = new CarList().CAR;
         adapter = new RecyclerViewAdapter(PickCar.this, ListCar);
 
@@ -36,6 +40,15 @@ public class PickCar extends AppCompatActivity {
 //            public void onClick(View view) {
 //                Intent back = new Intent(PickCar.this, DateActivity.class);
 //                startActivity(back);
+//            }
+//        });
+
+//        btnPay = findViewById(R.id.pay);
+//        btnPay.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent pay = new Intent(PickCar.this, Detail.class);
+//                startActivity(pay);
 //            }
 //        });
 

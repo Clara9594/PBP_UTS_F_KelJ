@@ -1,7 +1,6 @@
 package com.example.tugasbesar_pbp_f;
 
 import android.content.Context;
-import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tugasbesar_pbp_f.databinding.AdapterRecyclerViewBinding;
 import com.example.tugasbesar_pbp_f.databinding.AdapterRecyclerViewBinding;
-import com.google.android.material.card.MaterialCardView;
 
 import java.util.List;
 
@@ -44,14 +42,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, final int position) {
         final Car car = result.get(position);
         holder.adapterRecyclerViewBinding.setCar(car);
-
-        holder.linked.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(context, Check.class);
-                context.startActivity(intent);
-            }
-        });
     }
 
     @Override
@@ -63,7 +53,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
         private ImageView foto_profil;
         private CardView parent;
-        private MaterialCardView linked;
         AdapterRecyclerViewBinding adapterRecyclerViewBinding;
 
         public MyViewHolder(@NonNull AdapterRecyclerViewBinding itemView){
@@ -72,10 +61,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
 
         public void onClick(View view) {
-//            Toast.makeText(context, "You touch me?", Toast.LENGTH_SHORT).show();
-//            linked = (MaterialCardView) view.findViewById(R.id.link_card);
-//            linked.setOnClickListener(this);
-
+            Toast.makeText(context, "You touch me?", Toast.LENGTH_SHORT).show();
         }
     }
 }

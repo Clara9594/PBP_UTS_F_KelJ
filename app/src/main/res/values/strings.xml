@@ -84,7 +84,7 @@
     <string name="drop_off_time">Drop-Off Time</string>
     <string name="continueD">Continue</string>
     <string name="receipt_title"></string>
-
+    <string name="pay">Pay</string>
 
     <!--    Ini buat settings-->
     <string name="header">Set Your Theme</string>
