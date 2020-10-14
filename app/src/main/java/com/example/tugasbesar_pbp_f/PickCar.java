@@ -1,6 +1,9 @@
 package com.example.tugasbesar_pbp_f;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -19,12 +22,22 @@ public class PickCar extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
     private RecyclerView.LayoutManager mLayoutManager;
+    ImageButton back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         ListCar = new CarList().CAR;
         adapter = new RecyclerViewAdapter(PickCar.this, ListCar);
+
+//        back = findViewById(R.id.bckDate);
+//        back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent back = new Intent(PickCar.this, DateActivity.class);
+//                startActivity(back);
+//            }
+//        });
 
         activityPickcarBinding = DataBindingUtil.setContentView(this,R.layout.activity_pickcar);
         activityPickcarBinding.recyclerViewCar.setLayoutManager(new LinearLayoutManager(this));

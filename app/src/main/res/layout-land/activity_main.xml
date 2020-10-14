@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/drawer_layout"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/toolbar">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,6 +19,18 @@
             android:background="@color/toolbar"
             android:layout_width="match_parent"
             android:layout_height="93dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button"
+            android:layout_width="320dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="210dp"
+            android:layout_marginTop="90dp"
+            android:background="@drawable/edit_text_radius"
+            android:fontFamily="@font/mregular"
+            android:text="@string/pick_up_location"
+            android:textColor="@color/black"
+            app:backgroundTint="@android:color/white" />
     </LinearLayout>
 
     <RelativeLayout
@@ -28,5 +41,7 @@
         <include
             layout="@layout/sidebar"/>
     </RelativeLayout>
+
+
 
 </androidx.drawerlayout.widget.DrawerLayout>

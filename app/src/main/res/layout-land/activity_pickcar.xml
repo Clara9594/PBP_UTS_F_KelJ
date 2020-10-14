@@ -43,11 +43,12 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
+            android:id="@+id/bckDate"
             android:layout_width="71dp"
             android:layout_height="64dp"
             android:layout_marginTop="4dp"
             android:background="@android:color/transparent"
-            android:src="@drawable/ic_baseline_dehaze_24"
+            android:src="@drawable/ic_baseline_chevron_left_24"
             android:tint="#ffff"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

@@ -2,9 +2,12 @@ package com.example.tugasbesar_pbp_f;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.location.Address;
+import android.location.Geocoder;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -45,7 +48,9 @@ import com.mapbox.mapboxsdk.style.sources.GeoJsonSource;
 import com.mapbox.services.android.navigation.ui.v5.route.NavigationMapRoute;
 import com.mapbox.services.android.navigation.v5.navigation.NavigationRoute;
 
+import java.io.IOException;
 import java.util.List;
+import java.util.Locale;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -66,15 +71,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private LocationComponent locationComponent;
     private DirectionsRoute currentRoute;
     private static final String TAG = "DirectionsActivity";
-    private Point origin;
+    private Point origin,destination;
     private NavigationMapRoute navigationMapRoute;
     private MapboxMap mapboxMap;
     private MapView mapView;
-    private Point destination;
     private int requestCode;
     private int resultCode;
     private Intent data;
-    private MaterialTextView btnNext;
+    private MaterialButton btnNext;
+    public String tampungalamat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,12 +98,12 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View view) {
                 Intent intent = new PlaceAutocomplete.IntentBuilder()
-                    .accessToken(Mapbox.getAccessToken()!=null ? Mapbox.getAccessToken() : getString(R.string.access_token))
-                    .placeOptions(PlaceOptions.builder()
-                            .backgroundColor(Color.parseColor("#EEEEEE"))
-                            .limit(10)
-                            .build(PlaceOptions.MODE_CARDS))
-                    .build(MapsActivity.this);
+                        .accessToken(Mapbox.getAccessToken()!=null ? Mapbox.getAccessToken() : getString(R.string.access_token))
+                        .placeOptions(PlaceOptions.builder()
+                                .backgroundColor(Color.parseColor("#EEEEEE"))
+                                .limit(10)
+                                .build(PlaceOptions.MODE_CARDS))
+                        .build(MapsActivity.this);
                 startActivityForResult(intent, REQUEST_CODE_AUTOCOMPLETE);
             }
         });
@@ -108,7 +113,11 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             @Override
             public void onClick(View view) {
                 Intent next = new Intent(MapsActivity.this,DateActivity.class);
+                Bundle mBundle = new Bundle();
+                mBundle.putString("alamat",tampungalamat);
+                next.putExtra("regis",mBundle);
                 startActivity(next);
+
             }
         });
 
@@ -197,15 +206,18 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
                     mapboxMap.animateCamera(CameraUpdateFactory.newCameraPosition(
                             new CameraPosition.Builder()
-                            .target(new LatLng(((Point) selectedCarmenFeature.geometry()).latitude(),
-                                    ((Point) selectedCarmenFeature.geometry()).longitude()))
-                            .zoom(14)
-                            .build()), 4000);
+                                    .target(new LatLng(((Point) selectedCarmenFeature.geometry()).latitude(),
+                                            ((Point) selectedCarmenFeature.geometry()).longitude()))
+                                    .zoom(14)
+                                    .build()), 4000);
 
                     destination = Point.fromLngLat(((Point) selectedCarmenFeature.geometry()).longitude(), ((Point) selectedCarmenFeature.geometry()).latitude());
                     origin = Point.fromLngLat(locationComponent.getLastKnownLocation().getLongitude(), locationComponent.getLastKnownLocation().getLatitude());
 
                     getRoute(origin, destination);
+                    double longg = destination.longitude();
+                    double latt = destination.latitude();
+                    tampungalamat = getAddress(MapsActivity.this,latt,longg);
                 }
             }
         }
@@ -278,6 +290,28 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             permissionsManager = new PermissionsManager(this);
             permissionsManager.requestLocationPermissions(this);
         }
+    }
+
+    public String getAddress(Context ctx, double lat, double lng){
+        String fullAdd=null;
+        try{
+            Geocoder geocoder= new Geocoder(ctx, Locale.getDefault());
+            List<android.location.Address> addresses = geocoder.getFromLocation(lat,lng,1);
+            if(addresses.size()>0){
+                Address address = addresses.get(0);
+                fullAdd = address.getAddressLine(0);
+
+                // if you want only city or pin code use following code //
+           /* String Location = address.getLocality();
+            String zip = address.getPostalCode();
+            String Country = address.getCountryName(); */
+            }
+
+
+        }catch(IOException ex){
+            ex.printStackTrace();
+        }
+        return fullAdd;
     }
 
     @Override

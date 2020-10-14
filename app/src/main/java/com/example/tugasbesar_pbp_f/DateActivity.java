@@ -33,7 +33,9 @@ public class DateActivity extends AppCompatActivity {
     ImageButton btn;
     int t1Hour,t1Minute,t2Hour,t2Minute;
     MaterialButton mb2, mb3, mb4,btnSearch;
-    MaterialTextView text;
+    MaterialTextView text,textAlamat;
+    public Bundle mBundle;
+    public String tampilAlamat;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +53,12 @@ public class DateActivity extends AppCompatActivity {
         mb3 = findViewById(R.id.materialButton3);
         mb4 = findViewById(R.id.materialButton4);
         text = findViewById(R.id.text);
+        textAlamat = findViewById(R.id.materialTextView2);
         btnSearch = findViewById(R.id.search);
+        mBundle = getIntent().getBundleExtra("regis");
+        tampilAlamat = mBundle.getString("alamat");
+        textAlamat.setText(tampilAlamat);
+
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,15 +115,11 @@ public class DateActivity extends AppCompatActivity {
                         //Store hout and minute in string
                         String time = t1Hour + ":" +t1Minute;
                         //Set hour and minute
-                        SimpleDateFormat f24Hours = new SimpleDateFormat(
-                                "HH:mm"
-                        );
+                        SimpleDateFormat f24Hours = new SimpleDateFormat("HH:mm");
                         try{
                             Date date = f24Hours.parse(time);
                             //Initialize 12 hours time format
-                            SimpleDateFormat f12Hours = new SimpleDateFormat(
-                                    "hh:mm aa"
-                            );
+                            SimpleDateFormat f12Hours = new SimpleDateFormat("hh:mm aa");
                             pickTime.setText(f12Hours.format(date));
                         }catch (ParseException e){
                             e.printStackTrace();
@@ -141,15 +144,11 @@ public class DateActivity extends AppCompatActivity {
                         //Store hout and minute in string
                         String time = t2Hour + ":" +t2Minute;
                         //Set hour and minute
-                        SimpleDateFormat f24Hours = new SimpleDateFormat(
-                                "HH:mm"
-                        );
+                        SimpleDateFormat f24Hours = new SimpleDateFormat("HH:mm");
                         try{
                             Date date = f24Hours.parse(time);
                             //Initialize 12 hours time format
-                            SimpleDateFormat f12Hours = new SimpleDateFormat(
-                                    "hh:mm aa"
-                            );
+                            SimpleDateFormat f12Hours = new SimpleDateFormat("hh:mm aa");
                             dropTime.setText(f12Hours.format(date));
                         }catch (ParseException e){
                             e.printStackTrace();
@@ -186,6 +185,43 @@ public class DateActivity extends AppCompatActivity {
         btnSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd/MM/yyyy hh:mm aa");
+                String a = pickDate.getText().toString();
+                String b = dropDate.getText().toString();
+                String c = pickTime.getText().toString();
+                String d = dropTime.getText().toString();
+                String date1 = a + " " + c;
+                String date2 = b + " " + d;
+
+                try {
+                    Date satu = simpleDateFormat.parse(date1);
+                    Date dua = simpleDateFormat.parse(date2);
+                    long diff = dua.getTime() - satu.getTime();
+
+                    //hasil.setText(String.valueOf(diff));
+
+                    long secondsInMilli = 1000;
+                    long minutesInMilli = secondsInMilli * 60;
+                    long hoursInMilli = minutesInMilli * 60;
+                    long daysInMilli = hoursInMilli * 24;
+
+                    long elapsedDays = diff / daysInMilli;
+                    diff = diff % daysInMilli;
+
+                    long elapsedHours = diff / hoursInMilli;
+                    diff = diff % hoursInMilli;
+
+                    long elapsedMinutes = diff / minutesInMilli;
+                    diff = diff % minutesInMilli;
+
+                    long elapsedSeconds = diff / secondsInMilli;
+
+                    //hasil2.setText(String.valueOf(elapsedDays)  + " days " + String.valueOf(elapsedHours) +" hours " + String.valueOf(elapsedMinutes) + " minutes");
+
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                Bundle bundle = new Bundle();
                 Intent search = new Intent(DateActivity.this,PickCar.class);
                 startActivity(search);
             }
