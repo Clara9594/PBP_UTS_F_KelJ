@@ -17,7 +17,6 @@
     </data>
 
     <com.google.android.material.card.MaterialCardView
-
         android:layout_marginHorizontal="16dp"
         android:layout_marginVertical="8dp"
         android:layout_width="match_parent"

@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -73,20 +74,18 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/pickDate_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="165dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toStartOf="@+id/dropDate_layout"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/materialTextView2"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView2">
+
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/pickDateInput"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:autofillHints=""
-            android:hint="@string/pick_up_date"
             android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -102,18 +101,15 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dropDate_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="165dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="40dp"
         app:layout_constraintEnd_toEndOf="@+id/materialTextView2"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView2">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/dropDateInput"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:autofillHints=""
-            android:hint="@string/drop_out_date"
             android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -129,18 +125,15 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/pickTimes_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="165dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="125dp"
         app:layout_constraintStart_toStartOf="@+id/materialTextView2"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView2">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/pickTimesInput"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:autofillHints=""
-            android:hint="@string/pick_up_times"
             android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -156,30 +149,26 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dropTimes_layout"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="175dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="165dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="125dp"
         app:layout_constraintEnd_toEndOf="@+id/materialTextView2"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView2">
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/dropTimesInput"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:autofillHints=""
-            android:hint="@string/drop_out_times"
             android:inputType="date" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/text"
-        android:layout_width="80dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="79dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="20dp"
         android:textSize="15dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/pickTimes_layout" />
+        app:layout_constraintStart_toEndOf="@+id/ageTextView"
+        app:layout_constraintTop_toTopOf="@+id/ageTextView" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/ageTextView"

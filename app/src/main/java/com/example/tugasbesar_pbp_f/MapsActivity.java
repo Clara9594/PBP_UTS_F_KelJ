@@ -65,6 +65,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     private static final String DESTINATION_SYMBOL_LAYER_ID = "destination-symbol-layer-id";
     private static final String DESTINATION_ICON_ID = "destination-icon-id";
     private static final String DESTINATION_SOURCE_ID = "destination-source-id";
+    private static final String ORIGIN_SOURCE_ID = "origin-source-id";
     private static final int REQUEST_CODE_AUTOCOMPLETE = 1;
     private FloatingActionButton searchView;
     private PermissionsManager permissionsManager;
@@ -123,6 +124,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
 
     }
 
+
+
     @Override
     public void onExplanationNeeded(List<String> permissionsToExplain) {
         Toast.makeText(this, "Grant Location Permission", Toast.LENGTH_SHORT).show();
@@ -155,6 +158,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 mapboxMap.addOnMapClickListener(MapsActivity.this);
             }
         });
+
     }
 
     private void addDestinationIconSymbolLayer(@NonNull Style loadedMapStyle) {
@@ -182,6 +186,9 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
 
         getRoute(originPoint, destinationPoint);
+        double longg = destinationPoint.longitude();
+        double latt = destinationPoint.latitude();
+        tampungalamat = getAddress(MapsActivity.this,latt,longg);
         return true;
     }
 
@@ -215,6 +222,8 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                     origin = Point.fromLngLat(locationComponent.getLastKnownLocation().getLongitude(), locationComponent.getLastKnownLocation().getLatitude());
 
                     getRoute(origin, destination);
+
+                    //Bundle
                     double longg = destination.longitude();
                     double latt = destination.latitude();
                     tampungalamat = getAddress(MapsActivity.this,latt,longg);
@@ -290,8 +299,14 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
             permissionsManager = new PermissionsManager(this);
             permissionsManager.requestLocationPermissions(this);
         }
+
+        double longg = origin.longitude();
+        double latt = origin.latitude();
+        tampungalamat = getAddress(MapsActivity.this,latt,longg);
     }
 
+
+    //Bundle
     public String getAddress(Context ctx, double lat, double lng){
         String fullAdd=null;
         try{

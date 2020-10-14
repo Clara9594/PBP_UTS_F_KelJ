@@ -221,7 +221,6 @@ public class DateActivity extends AppCompatActivity {
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
-                Bundle bundle = new Bundle();
                 Intent search = new Intent(DateActivity.this,PickCar.class);
                 startActivity(search);
             }
