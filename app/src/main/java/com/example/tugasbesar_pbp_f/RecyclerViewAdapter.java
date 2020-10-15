@@ -1,6 +1,8 @@
 package com.example.tugasbesar_pbp_f;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -49,7 +51,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         return result.size();
     }
 
-    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class MyViewHolder extends RecyclerView.ViewHolder {
 
         private ImageView foto_profil;
         private CardView parent;
@@ -58,10 +60,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         public MyViewHolder(@NonNull AdapterRecyclerViewBinding itemView){
             super(itemView.getRoot());
             adapterRecyclerViewBinding = itemView;
-        }
 
-        public void onClick(View view) {
-            Toast.makeText(context, "You touch me?", Toast.LENGTH_SHORT).show();
+            adapterRecyclerViewBinding.itemcard.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    int itemPosition = getLayoutPosition();
+                    Intent next = new Intent(context,Detail.class);
+                    Bundle mBundle = new Bundle();
+                    mBundle.putInt("harga",result.get(itemPosition).getHarga());
+                    next.putExtra("hargaDetail",mBundle);
+                    context.startActivity(next);
+                }
+            });
         }
     }
 }

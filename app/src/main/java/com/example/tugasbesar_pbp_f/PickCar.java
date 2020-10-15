@@ -25,6 +25,8 @@ public class PickCar extends AppCompatActivity {
     private RecyclerView.LayoutManager mLayoutManager;
     ImageButton back;
     MaterialButton btnPay;
+    public Bundle mBundle;
+    public long temp1, temp2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,10 @@ public class PickCar extends AppCompatActivity {
 
         ListCar = new CarList().CAR;
         adapter = new RecyclerViewAdapter(PickCar.this, ListCar);
+        mBundle = getIntent().getBundleExtra("durasi");
+        temp1 = mBundle.getLong("hari");
+        temp2 = mBundle.getLong("jam");
+
 
 //        back = findViewById(R.id.bckDate);
 //        back.setOnClickListener(new View.OnClickListener() {

@@ -31,7 +31,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:layout_width="185dp"
+        android:id="@+id/teks1"
+        android:layout_width="wrap_content"
         android:layout_height="68dp"
         android:layout_marginTop="176dp"
         android:background="@color/white"
@@ -41,12 +42,25 @@
         app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:layout_width="179dp"
+        android:id="@+id/teks2"
+        android:layout_width="wrap_content"
         android:layout_height="75dp"
         android:layout_marginTop="284dp"
         android:background="@color/white"
         android:textSize="50dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/teks3"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_marginTop="420dp"
+        android:background="@color/white"
+        android:textSize="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar3" />
 

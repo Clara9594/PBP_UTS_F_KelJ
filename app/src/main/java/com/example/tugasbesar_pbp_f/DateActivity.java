@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.TimePicker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -36,6 +37,7 @@ public class DateActivity extends AppCompatActivity {
     MaterialTextView text,textAlamat;
     public Bundle mBundle;
     public String tampilAlamat;
+    public static long elapsedDays,elapsedHours,elapsedMinutes,elapsedSeconds;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -205,24 +207,34 @@ public class DateActivity extends AppCompatActivity {
                     long hoursInMilli = minutesInMilli * 60;
                     long daysInMilli = hoursInMilli * 24;
 
-                    long elapsedDays = diff / daysInMilli;
+                    elapsedDays = diff / daysInMilli;
                     diff = diff % daysInMilli;
 
-                    long elapsedHours = diff / hoursInMilli;
+                    elapsedHours = diff / hoursInMilli;
                     diff = diff % hoursInMilli;
 
-                    long elapsedMinutes = diff / minutesInMilli;
+                    elapsedMinutes = diff / minutesInMilli;
                     diff = diff % minutesInMilli;
 
-                    long elapsedSeconds = diff / secondsInMilli;
+                    elapsedSeconds = diff / secondsInMilli;
 
                     //hasil2.setText(String.valueOf(elapsedDays)  + " days " + String.valueOf(elapsedHours) +" hours " + String.valueOf(elapsedMinutes) + " minutes");
-
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
+
                 Intent search = new Intent(DateActivity.this,PickCar.class);
+                Bundle mBundle = new Bundle();
+                mBundle.putLong("hari",elapsedDays);
+                mBundle.putLong("jam",elapsedHours);
+                search.putExtra("durasi",mBundle);
                 startActivity(search);
+
+//                Intent pick = new Intent(DateActivity.this, Detail.class);
+//                Bundle mBundle1 = new Bundle();
+//                mBundle1.putLong("hari",elapsedDays);
+//                mBundle1.putLong("jam",elapsedHours);
+//                pick.putExtra("durasi1",mBundle1);
             }
         });
     }
