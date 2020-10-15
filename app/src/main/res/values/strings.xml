@@ -103,12 +103,17 @@
     <!--    Ini string untuk success-->
     <string name="success">Success!</string>
     <string name="finish">Finish</string>
-
-
+    
     <!--    ini buat main activity-->
     <string name="wellcome">Welcome to Cardido</string>
     <string name="searchTxt">What</string>
     <string name="access_token">pk.eyJ1IjoiYmVubmF0aDk3MDIiLCJhIjoiY2tmcXFhaWt0MDd6ejJ5cWxqbWwzaGYxaCJ9.4ETLW7gFNVDSreF9xNk40w</string>
     <string name="next">Next</string>
+
+    <!--    ini buat detail-->
+    <string name="total">Total :</string>
+    <string name="price">Rental Price :</string>
+    <string name="number">Number Of Days :</string>
+    <string name="rp">Rp</string>
 
 </resources>

@@ -45,7 +45,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         final Car car = result.get(position);
         holder.adapterRecyclerViewBinding.setCar(car);
     }
-
+  
     @Override
     public int getItemCount() {
         return result.size();

@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tugasbesar_pbp_f.databinding.ActivityPickcarBinding;
-import com.example.tugasbesar_pbp_f.databinding.ActivityPickcarBinding;
 import com.google.android.material.button.MaterialButton;
 
 import java.util.ArrayList;
@@ -31,7 +30,6 @@ public class PickCar extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pickcar);
 
         ListCar = new CarList().CAR;
         adapter = new RecyclerViewAdapter(PickCar.this, ListCar);

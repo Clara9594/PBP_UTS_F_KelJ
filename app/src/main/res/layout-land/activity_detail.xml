@@ -34,6 +34,7 @@
         android:id="@+id/backCar"
         android:layout_width="71dp"
         android:layout_height="64dp"
+        android:layout_marginStart="8dp"
         android:background="@android:color/transparent"
         android:src="@drawable/ic_baseline_chevron_left_24"
         android:tint="#ffff"
@@ -62,8 +63,8 @@
         android:id="@+id/materialTextView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/mbold"
         android:text="@string/number"
         android:textColor="@color/textColor"
@@ -73,28 +74,27 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/teks1"
-        android:layout_width="219dp"
-        android:layout_height="41dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="213dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="56dp"
         android:background="@android:color/transparent"
         android:textSize="25dp"
         android:textColor="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.192"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView5" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/teks3"
-        android:layout_width="247dp"
-        android:layout_height="52dp"
+        android:layout_width="238dp"
+        android:layout_height="41dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/transparent"
         android:textSize="25dp"
         android:textColor="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.081"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView4" />
 
@@ -102,27 +102,29 @@
         android:id="@+id/materialTextView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="236dp"
+        android:layout_marginTop="12dp"
         android:fontFamily="@font/mbold"
         android:text="@string/price"
         android:textColor="@color/textColor"
         android:textSize="20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teks3" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/materialTextView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/materialTextView7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="22dp"
+        android:layout_marginTop="96dp"
         android:fontFamily="@font/mbold"
         android:text="@string/total"
         android:textColor="@color/textColor"
         android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/teks1" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/teks2"
@@ -133,7 +135,6 @@
         android:textSize="25dp"
         android:textColor="@color/textColor"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.222"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/materialTextView7" />
 
@@ -141,7 +142,7 @@
         android:id="@+id/pay"
         android:layout_width="241dp"
         android:layout_height="53dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="16dp"
         android:fontFamily="@font/mregular"
         android:text="@string/pay"
         android:textSize="20dp"

@@ -26,15 +26,15 @@ import java.util.Date;
 import java.util.Locale;
 
 public class DateActivity extends AppCompatActivity {
-    TextInputEditText pickDate,dropDate, pickTime, dropTime;
-    TextInputLayout tvDate;
+    private TextInputEditText pickDate,dropDate, pickTime, dropTime;
+    private TextInputLayout tvDate;
     private DatePickerDialog datePickerDialog;
     private DatePickerDialog.OnDateSetListener mDate;
     private SimpleDateFormat dateFormatter;
-    ImageButton btn;
+    private ImageButton btn;
     int t1Hour,t1Minute,t2Hour,t2Minute;
-    MaterialButton mb2, mb3, mb4,btnSearch;
-    MaterialTextView text,textAlamat;
+    private MaterialButton mb2, mb3, mb4,btnSearch;
+    private MaterialTextView text,textAlamat;
     public Bundle mBundle;
     public String tampilAlamat;
     public static long elapsedDays,elapsedHours,elapsedMinutes,elapsedSeconds;
