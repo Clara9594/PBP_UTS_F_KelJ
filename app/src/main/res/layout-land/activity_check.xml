@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E9E9E9">
+    android:background="@color/background">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar3"
@@ -50,7 +50,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center"
         android:text="@string/success"
-        android:textColor="#212b66"
+        android:textColor="@color/icon"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
@@ -63,7 +63,7 @@
         android:layout_marginBottom="104dp"
         android:text="@string/finish"
         android:textColor="@android:color/white"
-        app:backgroundTint="#212b66"
+        app:backgroundTint="@color/buttonSignIn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
         app:layout_constraintHorizontal_bias="0.481"

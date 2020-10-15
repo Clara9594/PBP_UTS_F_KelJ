@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.DatePicker;
 import android.widget.ImageButton;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
@@ -37,6 +38,7 @@ public class DateActivity extends AppCompatActivity {
     private MaterialTextView text,textAlamat;
     public Bundle mBundle;
     public String tampilAlamat;
+    public Date satu, dua;
     public static long elapsedDays,elapsedHours,elapsedMinutes,elapsedSeconds;
 
     @Override
@@ -196,8 +198,8 @@ public class DateActivity extends AppCompatActivity {
                 String date2 = b + " " + d;
 
                 try {
-                    Date satu = simpleDateFormat.parse(date1);
-                    Date dua = simpleDateFormat.parse(date2);
+                    satu = simpleDateFormat.parse(date1);
+                    dua = simpleDateFormat.parse(date2);
                     long diff = dua.getTime() - satu.getTime();
 
                     //hasil.setText(String.valueOf(diff));
@@ -223,12 +225,24 @@ public class DateActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
 
-                Intent search = new Intent(DateActivity.this,PickCar.class);
-                Bundle mBundle = new Bundle();
-                mBundle.putLong("hari",elapsedDays);
-                mBundle.putLong("jam",elapsedHours);
-                search.putExtra("durasi",mBundle);
-                startActivity(search);
+
+                if(pickDate.getText().toString().isEmpty() || dropDate.getText().toString().isEmpty()
+                        || pickTime.getText().toString().isEmpty() || dropTime.getText().toString().isEmpty()
+                        || text.getText().toString().isEmpty()) {
+                    Toast.makeText(DateActivity.this, "Fill the Empty Fields", Toast.LENGTH_SHORT).show();
+                } else if (dua.getTime() < satu.getTime()) {
+                    Toast.makeText(DateActivity.this, "Drop-out Date Greater than Pick-up Date", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Intent search = new Intent(DateActivity.this,PickCar.class);
+                    Bundle mBundle = new Bundle();
+                    mBundle.putLong("hari",elapsedDays);
+                    mBundle.putLong("jam",elapsedHours);
+                    search.putExtra("durasi",mBundle);
+                    startActivity(search);
+                }
+
+
 
 //                Intent pick = new Intent(DateActivity.this, Detail.class);
 //                Bundle mBundle1 = new Bundle();

@@ -46,7 +46,7 @@
             android:id="@+id/bckDate"
             android:layout_width="71dp"
             android:layout_height="64dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_baseline_chevron_left_24"
             android:tint="#ffff"

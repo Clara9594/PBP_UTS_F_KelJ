@@ -22,8 +22,7 @@ public class PickCar extends AppCompatActivity {
     private RecyclerView recyclerView;
     private RecyclerViewAdapter adapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    ImageButton back;
-    MaterialButton btnPay;
+    private ImageButton back;
     public Bundle mBundle;
     public long temp1, temp2;
 
@@ -33,27 +32,14 @@ public class PickCar extends AppCompatActivity {
 
         ListCar = new CarList().CAR;
         adapter = new RecyclerViewAdapter(PickCar.this, ListCar);
-        mBundle = getIntent().getBundleExtra("durasi");
-        temp1 = mBundle.getLong("hari");
-        temp2 = mBundle.getLong("jam");
-
+//        mBundle = getIntent().getBundleExtra("durasi");
+//        temp1 = mBundle.getLong("hari");
+//        temp2 = mBundle.getLong("jam");
 
 //        back = findViewById(R.id.bckDate);
-//        back.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent back = new Intent(PickCar.this, DateActivity.class);
-//                startActivity(back);
-//            }
-//        });
-
-//        btnPay = findViewById(R.id.pay);
-//        btnPay.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent pay = new Intent(PickCar.this, Detail.class);
-//                startActivity(pay);
-//            }
+//        back.setOnClickListener(view -> {
+//            Intent back = new Intent(PickCar.this, DateActivity.class);
+//            startActivity(back);
 //        });
 
         activityPickcarBinding = DataBindingUtil.setContentView(this,R.layout.activity_pickcar);

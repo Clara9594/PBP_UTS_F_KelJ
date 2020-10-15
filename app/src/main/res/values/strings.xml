@@ -116,4 +116,8 @@
     <string name="number">Number Of Days :</string>
     <string name="rp">Rp</string>
 
+    <!--    ini recycler-->
+    <string name="passanger">Passengers</string>
+    <string name="bags">Bags</string>
+
 </resources>

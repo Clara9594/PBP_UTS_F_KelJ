@@ -42,7 +42,7 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.178" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/name_car"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
@@ -56,7 +56,7 @@
                 app:layout_constraintStart_toStartOf="@+id/image_car"
                 app:layout_constraintTop_toTopOf="@+id/image_car" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/brand_car"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -70,21 +70,32 @@
                 app:layout_constraintTop_toBottomOf="@+id/name_car"
                 tools:ignore="SmallSp" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/passenger"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_width="98dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="4dp"
                 android:maxLines="3"
-                android:textSize="18sp"
                 android:text="@{String.valueOf(car.penumpang)}"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="@+id/brand_car"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/brand_car"
                 app:layout_constraintTop_toBottomOf="@+id/brand_car"
                 tools:ignore="SmallSp" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/mregular"
+                android:text="@string/passanger"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/brand_car" />
+
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/bag"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -98,21 +109,32 @@
                 app:layout_constraintTop_toBottomOf="@+id/passenger"
                 tools:ignore="SmallSp" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="36dp"
+                android:fontFamily="@font/mregular"
+                android:text="@string/bags"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/brand_car" />
+
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/fuel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="4dp"
                 android:maxLines="3"
-                android:textSize="18sp"
                 android:text="@{car.bensin}"
+                android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="@+id/bag"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/bag"
                 app:layout_constraintTop_toBottomOf="@+id/bag"
                 tools:ignore="SmallSp" />
 
-            <TextView
+            <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/price"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
