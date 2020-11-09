@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -9,10 +10,11 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
+        android:layout_width="609dp"
+        android:layout_height="72dp"
         android:layout_margin="16dp"
         android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:onClick="ClickLogo"
         android:src="@drawable/logo"
@@ -32,7 +34,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="156dp"
+        android:layout_marginTop="80dp"
         android:gravity="center_vertical"
         android:onClick="ClickHome"
         android:orientation="horizontal"
@@ -62,16 +64,16 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:src="@drawable/ic_home"
-            app:tint="@color/icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="124dp"
         android:gravity="center_vertical"
         android:onClick="ClickProfil"
         android:orientation="horizontal"
@@ -85,9 +87,9 @@
             android:layout_height="60dp"
             android:layout_marginStart="35dp"
             android:layout_marginEnd="333dp"
+            android:fontFamily="@font/mregular"
             android:padding="12dp"
             android:text="@string/pp"
-            android:fontFamily="@font/mregular"
             android:textSize="25dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -102,22 +104,102 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="18dp"
             android:src="@drawable/ic_akun"
-            app:tint="@color/icon"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="244dp"
-    android:gravity="center_vertical"
-    android:onClick="ClickSettings"
-    android:orientation="horizontal"
-    app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintHorizontal_bias="0.0"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+        android:id="@+id/booking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_vertical"
+        android:onClick="ClickBooking"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.473">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="216dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="333dp"
+            android:fontFamily="@font/mregular"
+            android:padding="12dp"
+            android:text="@string/booking"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/booking"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_vertical"
+        android:onClick="ClickHistory"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.592">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="216dp"
+            android:layout_height="58dp"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="333dp"
+            android:fontFamily="@font/mregular"
+            android:padding="12dp"
+            android:text="@string/history"
+            android:textSize="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/history"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="164dp"
+        android:gravity="center_vertical"
+        android:onClick="ClickSettings"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2">
 
         <com.google.android.material.textview.MaterialTextView
             android:layout_width="152dp"
@@ -141,15 +223,15 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="18dp"
             android:src="@drawable/ic_settings"
-            app:tint="@color/icon"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="296dp"
         android:gravity="center_vertical"
         android:onClick="ClickAbout"
         android:orientation="horizontal"
@@ -163,10 +245,10 @@
             android:layout_height="60dp"
             android:layout_marginStart="35dp"
             android:layout_marginEnd="333dp"
+            android:fontFamily="@font/mregular"
             android:padding="12dp"
             android:text="@string/about"
             android:textSize="25dp"
-            android:fontFamily="@font/mregular"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -180,15 +262,16 @@
             android:layout_marginStart="15dp"
             android:layout_marginTop="18dp"
             android:src="@drawable/ic_info"
-            app:tint="@color/icon"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/icon" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="340dp"
         android:gravity="center_vertical"
         android:onClick="ClickSignOut"
         android:orientation="horizontal"
@@ -223,5 +306,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:tint="@color/icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

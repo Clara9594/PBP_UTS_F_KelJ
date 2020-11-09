@@ -22,6 +22,8 @@
     <!--    ini String buat sidebar-->
     <string name="home">Home</string>
     <string name="pp">Profile</string>
+    <string name="booking">My Booking</string>
+    <string name="history">History</string>
     <string name="about">About</string>
     <string name="setting">Settings</string>
     <string name="keluar">Sign Out</string>
@@ -103,7 +105,7 @@
     <!--    Ini string untuk success-->
     <string name="success">Success!</string>
     <string name="finish">Finish</string>
-    
+
     <!--    ini buat main activity-->
     <string name="wellcome">Welcome to Cardido</string>
     <string name="searchTxt">What</string>

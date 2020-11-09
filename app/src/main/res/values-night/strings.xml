@@ -22,10 +22,11 @@
     <!--    ini String buat sidebar-->
     <string name="home">Home</string>
     <string name="pp">Profile</string>
+    <string name="booking">My Booking</string>
+    <string name="history">History</string>
     <string name="about">About</string>
     <string name="setting">Settings</string>
     <string name="keluar">Sign Out</string>
-
 
     <!--    Ini string buat About Us-->
     <string name="aboutUs">About Us</string>
