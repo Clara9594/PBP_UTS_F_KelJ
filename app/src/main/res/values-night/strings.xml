@@ -116,4 +116,14 @@
     <string name="number">Number Of Days :</string>
     <string name="rp">Rp</string>
 
+    <!--    ini edit car admin-->
+    <string name="btnEdit">Edit</string>
+    <string name="cName">Car`s Name</string>
+    <string name="cType">Car`s Type</string>
+    <string name="passangers">Passengers</string>
+    <string name="bag">Bags</string>
+    <string name="fuel">Fuel</string>
+    <string name="file">Select a file</string>
+    <string name="cPrice">Price</string>
+
 </resources>
