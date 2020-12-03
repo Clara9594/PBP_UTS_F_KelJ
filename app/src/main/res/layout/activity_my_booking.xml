@@ -8,7 +8,7 @@
     <data>
         <variable
             name="booking"
-            type="com.example.tugasbesar_pbp_f.Booking"/>
+            type="com.example.tugasbesar_pbp_f.BookingDAO"/>
         <variable
             name="activity"
             type="com.example.tugasbesar_pbp_f.MyBookingActivity"/>
