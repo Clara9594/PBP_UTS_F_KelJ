@@ -15,10 +15,12 @@ public class Car {
     public String bensin;
     public int harga;
     public String imgURL;
+    public String plat_nomor;
 
     public Car(){}
 
-    public Car(String tipe, String merek, int penumpang, int tas, String bensin, int harga, String imgURL) {
+    public Car(String tipe, String merek, int penumpang, int tas, String bensin, int harga,
+               String imgURL, String plat_nomor) {
         this.tipe = tipe;
         this.merek = merek;
         this.penumpang = penumpang;
@@ -26,6 +28,7 @@ public class Car {
         this.bensin = bensin;
         this.harga = harga;
         this.imgURL = imgURL;
+        this.plat_nomor = plat_nomor;
     }
 
     public String getTipe() {
@@ -82,6 +85,14 @@ public class Car {
 
     public void setImgURL(String imgURL) {
         this.imgURL = imgURL;
+    }
+
+    public String getPlat_nomor() {
+        return plat_nomor;
+    }
+
+    public void setPlat_nomor(String plat_nomor) {
+        this.plat_nomor = plat_nomor;
     }
 
     @BindingAdapter("profileImage")

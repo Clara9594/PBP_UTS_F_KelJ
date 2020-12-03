@@ -40,6 +40,8 @@ public class DateActivity extends AppCompatActivity {
     public String tampilAlamat;
     public Date satu, dua;
     public static long elapsedDays,elapsedHours,elapsedMinutes,elapsedSeconds;
+    public static String pick_Up_Location="", pick_Up_date="",drop_Off_Date="",
+            pick_Up_Time="",drop_Off_Time="",driver_Age="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +64,9 @@ public class DateActivity extends AppCompatActivity {
         mBundle = getIntent().getBundleExtra("regis");
         tampilAlamat = mBundle.getString("alamat");
         textAlamat.setText(tampilAlamat);
+
+        pick_Up_Location = mBundle.getString("alamat");
+
 
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -169,6 +174,7 @@ public class DateActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 text.setText("18 - 29");
+                driver_Age = "18 - 29";
             }
         });
 
@@ -176,6 +182,7 @@ public class DateActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 text.setText("30 - 40");
+                driver_Age = "30 - 40";
             }
         });
 
@@ -183,6 +190,7 @@ public class DateActivity extends AppCompatActivity {
             @Override
             public void onClick(View view){
                 text.setText("40+");
+                driver_Age = "40+";
             }
         });
 
@@ -196,6 +204,11 @@ public class DateActivity extends AppCompatActivity {
                 String d = dropTime.getText().toString();
                 String date1 = a + " " + c;
                 String date2 = b + " " + d;
+
+                pick_Up_date    =   pickDate.getText().toString();
+                drop_Off_Date   =   dropDate.getText().toString();
+                pick_Up_Time    =   pickTime.getText().toString();
+                drop_Off_Time   =   dropTime.getText().toString();
 
                 try {
                     satu = simpleDateFormat.parse(date1);
@@ -236,8 +249,16 @@ public class DateActivity extends AppCompatActivity {
                 else {
                     Intent search = new Intent(DateActivity.this,PickCar.class);
                     Bundle mBundle = new Bundle();
+
                     mBundle.putLong("hari",elapsedDays);
                     mBundle.putLong("jam",elapsedHours);
+//                    mBundle.putString("pick_Up_Location", tampilAlamat);
+//                    mBundle.putString("pick_Up_Date",pickDate.getText().toString());
+//                    mBundle.putString("drop_Off_Date",dropDate.getText().toString());
+//                    mBundle.putString("pick_Up_Time",pickTime.getText().toString());
+//                    mBundle.putString("drop_Off_Time",dropTime.getText().toString());
+
+
                     search.putExtra("durasi",mBundle);
                     startActivity(search);
                 }

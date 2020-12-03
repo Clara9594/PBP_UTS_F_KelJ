@@ -74,4 +74,11 @@ dependencies {
     implementation ('com.mapbox.mapboxsdk:mapbox-android-navigation-ui:0.13.0'){
         transitive = true
     }
+
+    //RETROFIT
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.google.code.gson:gson:2.8.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.0.2'
+    implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
+
 }
