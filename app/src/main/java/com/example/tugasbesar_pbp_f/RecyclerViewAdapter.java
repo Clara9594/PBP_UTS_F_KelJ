@@ -68,6 +68,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
                     Intent next = new Intent(context,Detail.class);
                     Bundle mBundle = new Bundle();
                     mBundle.putInt("harga",result.get(itemPosition).getHarga());
+                    mBundle.putString("car_Name", result.get(itemPosition).getMerek());
+                    mBundle.putString("plat_nomor",result.get(itemPosition).getPlat_nomor());
                     next.putExtra("hargaDetail",mBundle);
                     context.startActivity(next);
                 }
