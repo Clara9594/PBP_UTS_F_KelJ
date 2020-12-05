@@ -148,6 +148,11 @@ public class MainActivity extends AppCompatActivity {
         redirectActivity(this,Profile.class);
     }
 
+    public void ClickBooking(View view){
+        //Redirect activity to Home
+        redirectActivity(this,MyBookingActivity.class);
+    }
+
     public void ClickSettings(View view){
         redirectActivity(this,SettingsMode.class);
     }

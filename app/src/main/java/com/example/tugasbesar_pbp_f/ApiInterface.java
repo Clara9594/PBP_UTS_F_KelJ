@@ -5,6 +5,7 @@ import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.PATCH;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
@@ -30,7 +31,7 @@ public interface ApiInterface {
     @POST("booking")
     @FormUrlEncoded
     Call<BookingResponse> createBooking(@Field("id_Pelanggan") int id_Pelanggan,
-                                     @Field("name") String name,
+                                     @Field("name" ) String name,
                                      @Field("pick_Up_Location") String pick_Up_Location,
                                      @Field("pick_Up_Date") String pick_Up_Date,
                                      @Field("drop_Off_Date") String drop_Off_Date,
